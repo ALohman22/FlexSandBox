@@ -6,10 +6,25 @@
 
 .sandbox-container{
   width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(58, 75, 80);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h1{
+  background-color: slategrey;
+  width: 90%;
+  text-align: center;
+  border: solid black 5px;
+  border-radius: 5px;
+}
+
+.sandbox{
+  background-color: slategray;
+  border-radius: 5px;
 }
 
 .flexBoxOpt{

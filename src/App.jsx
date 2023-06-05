@@ -5,10 +5,10 @@ import './App.css'
 
 function App() {
   const [boxes , setBoxes] = useState({value: 0})
-  const [direction , setDirection] = useState('row')
-  const [justify , setJustify] = useState('flex-start')
-  const [align , setAlign] = useState('flex-start')
-  const [flexWrap , setFlexWrap] = useState('nowrap')
+  const [direction , setDirection] = useState({value: 'row'})
+  const [justify , setJustify] = useState({value: 'flex-start'})
+  const [align , setAlign] = useState({value: 'flex-start'})
+  const [flexWrap , setFlexWrap] = useState({value: 'nowrap'})
  
   const numbers = [
     {value: 1, label: '1'},
@@ -31,8 +31,7 @@ function App() {
   const alignItems = [
     {value: 'flex-start', label: 'Flex Start'},
     {value: 'flex-end', label: 'Flex End'},
-    {value: 'center', label: 'Center'},
-    {value: 'stretch', label: 'Stretch'}
+    {value: 'center', label: 'Center'}
   ]
 
   const justifyContent = [
@@ -56,37 +55,62 @@ function App() {
 
         <Select 
           options={numbers}
-          value={boxes}
           onChange={setBoxes}
-          placeholder={'number of boxes'}
-          
+          placeholder='Number of Boxes'
+          styles={{
+            // control: (baseStyles, state) => ({
+            //   ...baseStyles,
+            //   borderColor: state.isFocused ? 'lightBlue' : 'black',
+            // }),
+          }}
         />
         <Select 
           options={flexDirection}
-          value={direction}
           onChange={setDirection}
-          placeholder={'Flex Direction'}
+          placeholder='Flex Direction'
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? 'lightBlue' : 'black',
+            }),
+          }}
           
         />
         <Select 
           options={justifyContent}
-          value={justify}
           onChange={setJustify}
-          placeholder={'Justify Content'}
+          placeholder='Justify Content'
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? 'lightBlue' : 'black',
+            }),
+          }}
           
         />
         <Select 
           options={alignItems}
-          value={align}
           onChange={setAlign}
-          placeholder={'Align Items'}
+          placeholder='Align Items'
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? 'lightBlue' : 'black',
+            }),
+          }}
+
           
         />
         <Select 
           options={wrap}
-          value={flexWrap}
           onChange={setFlexWrap}
-          placeholder={'Flex Wrap'}
+          placeholder='Flex Wrap'
+          styles={{
+            control: (baseStyles, state) => ({
+              ...baseStyles,
+              borderColor: state.isFocused ? 'lightBlue' : 'black',
+            }),
+          }}
           
         />
 
